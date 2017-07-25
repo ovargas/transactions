@@ -102,7 +102,7 @@ statistics.precision-milliseconds: 10
 ### Create Image
 
 ``` bash
-mvn clean package dockerfile:build
+mvn clean package docker:build
 ```
 
 ### Execute image
