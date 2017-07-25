@@ -4,23 +4,29 @@
 
 ### Start the service
 
-`mvn spring-boot:run`
+``` bash
+    mvn spring-boot:run
+```
 
 ### Execute tests
 
-`mvn clean -U verify`
+``` bash
+    mvn clean -U verify
+```
 
 ### Install
 
-`mvn clean -U install`
+``` bash
+    mvn clean -U install
+```
 
 ## Endpoints
 
-#### Add transaction ####
+#### Add transaction
 
 Every Time a new transaction happened, this endpoint will be called.
 
-##### Request #####
+##### Request
 
 `POST /transactions`
 
@@ -37,22 +43,22 @@ Every Time a new transaction happened, this endpoint will be called.
 | `timestamp` | Transaction time in epoch in millis in UTC time zone (this is not current timestamp) |
 
 
-##### Response #####
+##### Response
 
 | Http Status | Description |
 | ----------- | ----------- |
 | 201 | Transaction successfully added |
 | 204 | Transaction is older than 60 seconds |
 
-#### Get statistics ####
+#### Get statistics
 
 Get the statistic based on the transactions which happened in the last 60 seconds.
 
-##### Request #####
+##### Request
 
 `GET /statistics`
 
-##### Response #####
+##### Response
 
 ``` javascript
 {
@@ -90,4 +96,19 @@ statistics.precision-milliseconds: 10
 
 
 ```
+
+## Docker support
+
+### Create Image
+
+``` bash
+mvn clean package dockerfile:build
+```
+
+### Execute image
+
+``` bash
+docker-compose up
+```
+
 
