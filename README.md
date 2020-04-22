@@ -1,5 +1,7 @@
 # Statistics calculation
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ovargas_transactions&metric=alert_status)](https://sonarcloud.io/dashboard?id=ovargas_transactions)
+
 ## API
 
 ### Start the service
