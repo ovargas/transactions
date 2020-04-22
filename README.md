@@ -94,7 +94,6 @@ server:
 
 statistics.precision-milliseconds: 10
 
-
 ```
 
 ## Docker support
